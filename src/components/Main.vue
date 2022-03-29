@@ -2,6 +2,9 @@
   <div>
     <section id="main-content" >
       <div class="container centralized-item card-propeties-wrapper">
+        <button class="current-series">
+          <span>current series</span>
+        </button>
         <PropetiesCard
         v-for="(card, index) in mainCard"
         :key=index
@@ -143,8 +146,24 @@ export default {
   color: white;
   padding: 4rem 0;
   .card-propeties-wrapper{
+    position: relative;
     flex-wrap: wrap;
     justify-content: start;
+    .current-series{
+      position:absolute;
+      top: -90px;
+      color: white;
+      background-color: $brandColor;
+      padding: 1rem;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      span{
+        font-size: 1rem;
+        font-weight: 800;
+      }
+    }
   }
 }
 #card-section{
