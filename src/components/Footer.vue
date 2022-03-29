@@ -7,37 +7,17 @@
           <h2 class="my-text-white">DC COMICS</h2>
           <nav>
             <ul class="footer-list">
-              <li>
-                <a href="#">Characters</a> 
-              </li>
-              <li>
-                <a href="#">Comics</a>
-              </li>
-              <li>
-                <a href="#">Movies</a>
-              </li>
-              <li>
-                <a href="#">TV</a>
-              </li>
-              <li>
-                <a href="#">Games</a>
-              </li>
-              <li>
-                <a href="#">Videos</a>
-              </li>
-              <li>
-                <a href="#">News</a>
+              <li v-for="(link, index) in dcComics" :key="index">
+                <a href="#">{{ link.link }}</a> 
               </li>
             </ul>
           </nav>
+          <!-- SHOP DC -->
           <h2 class="my-text-white">SHOP</h2>
           <nav>
             <ul class="footer-list">
-              <li>
-                <a href="#">Shop DC </a> 
-              </li>
-              <li>
-                <a href="#">Shop DC Collectibles</a>
+              <li v-for="(link, index) in dcShop" :key="index">
+                <a href="#">{{ link.link }} </a> 
               </li>
             </ul>
           </nav>
@@ -46,38 +26,8 @@
           <h2 class="my-text-white">DC</h2>
           <nav>
             <ul class="footer-list">
-              <li>
-                <a href="#">Terms of use</a> 
-              </li>
-              <li>
-                <a href="#">Privacy Policy (News)</a>
-              </li>
-              <li>
-                <a href="#">Ad Choising</a>
-              </li>
-              <li>
-                <a href="#">Advertising</a>
-              </li>
-              <li>
-                <a href="#">Jobs</a>
-              </li>
-              <li>
-                <a href="#">Subscription</a>
-              </li>
-              <li>
-                <a href="#">Talent Workshop</a>
-              </li>
-              <li>
-                <a href="#">CPSC Certificates</a>
-              </li>
-              <li>
-                <a href="#">rating</a>
-              </li>
-              <li>
-                <a href="#">Shop Help</a>
-              </li>
-              <li>
-                <a href="#">Contact Us</a>
+              <li v-for="(link, index) in dcTerms" :key="index">
+                <a href="#">{{ link.link }}</a> 
               </li>
             </ul>
           </nav>
@@ -86,20 +36,8 @@
           <h2 class="my-text-white">SITES</h2>
           <nav>
             <ul class="footer-list">
-              <li>
-                <a href="#">DC</a> 
-              </li>
-              <li>
-                <a href="#">MAD Magazine</a>
-              </li>
-              <li>
-                <a href="#">DC Kinds</a>
-              </li>
-              <li>
-                <a href="#">DC Universe</a>
-              </li>
-              <li>
-                <a href="#">DC Power Visa</a>
+              <li v-for="(link, index) in dcSites" :key="index">
+                <a href="#">{{ link.link }}</a> 
               </li>
             </ul>
           </nav>
@@ -154,7 +92,97 @@
 
 <script>
 export default {
-  name: 'IndexFooter'
+  name: 'IndexFooter',
+  data: function(){
+    return{
+      dcComics: [
+        {
+          link: 'Characters'
+        },
+        {
+          link: 'Comics'
+        },
+        {
+          link: 'Movies'
+        },
+        {
+          link: 'TV'
+        },
+        {
+          link: 'Games'
+        },
+        {
+          link: 'Videos'
+        },
+        {
+          link: 'News'
+        },
+      ],
+      dcShop: [
+        {
+          link: 'Shop'
+        },
+        {
+          link: 'Shop DC Collectibles'
+        },
+      ],
+      dcTerms: [
+        {
+          link: 'Terms of use'
+        },
+        {
+          link: 'Privacy of policy (News)' 
+        },
+        {
+          link: 'Ad Choising'
+        },
+        {
+          link: 'Advertising'
+        },
+        {
+          link: 'Jobs'
+        },
+        {
+          link: 'Subscription'
+        },
+        {
+          link: 'Talent Workshop'
+        },
+        {
+          link: 'CPSP Certificates'
+        },
+        {
+          link: 'Rating'
+        },
+        {
+          link: 'Shop Help'
+        },
+        {
+          link: 'Contact us'
+        },
+      ],
+      dcSites: [
+        {
+          link: 'DC'
+        },
+        {
+          link: 'MAD'
+        },
+        {
+          link: 'Magazine'
+        },
+        {
+          link: 'DC Kids'
+        },
+        {
+          link: 'DC Universe'
+        },
+        {
+          link: 'DC Power Visa'
+        },
+      ]
+    }
+  }
 }
 </script>
 
